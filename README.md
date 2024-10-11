@@ -1,4 +1,4 @@
-# Ssoready C# Library
+# SSOReady C# Library
 
 [![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=https%3A%2F%2Fgithub.com%2Fssoready%2Fssoready-csharp)
 [![nuget shield](https://img.shields.io/nuget/v/SSOReady.Client)](https://nuget.org/packages/SSOReady.Client)

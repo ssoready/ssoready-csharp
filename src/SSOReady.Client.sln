@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSOReady.Client", "SSOReady.Client\SSOReady.Client.csproj", "{FC7672A2-4EA0-4E65-94C3-4F65A926429C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSOReady.Client.Test", "SSOReady.Client.Test\SSOReady.Client.Test.csproj", "{5D20A89B-660D-41D5-B5C8-C7285AA6E92F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC7672A2-4EA0-4E65-94C3-4F65A926429C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC7672A2-4EA0-4E65-94C3-4F65A926429C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC7672A2-4EA0-4E65-94C3-4F65A926429C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC7672A2-4EA0-4E65-94C3-4F65A926429C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D20A89B-660D-41D5-B5C8-C7285AA6E92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D20A89B-660D-41D5-B5C8-C7285AA6E92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D20A89B-660D-41D5-B5C8-C7285AA6E92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D20A89B-660D-41D5-B5C8-C7285AA6E92F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

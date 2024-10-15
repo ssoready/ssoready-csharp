@@ -22,7 +22,7 @@ public partial class SSOReady
                 { "X-Fern-Language", "C#" },
                 { "X-Fern-SDK-Name", "SSOReady.Client" },
                 { "X-Fern-SDK-Version", Version.Current },
-                { "User-Agent", "SSOReady.Client/0.1.0" },
+                { "User-Agent", "SSOReady.Client/0.1.1" },
             }
         );
         clientOptions ??= new ClientOptions();

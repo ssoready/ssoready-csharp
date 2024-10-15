@@ -20,6 +20,12 @@ public record Organization
     public string? EnvironmentId { get; set; }
 
     /// <summary>
+    /// An optional human-friendly name for this organization.
+    /// </summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>
     /// An identifier you can attach to an organization. Meant to be used to correlate an SSOReady organization to your
     /// internal equivalent concept.
     ///

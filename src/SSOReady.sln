@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSOReady", "SSOReady\SSOReady.csproj", "{CEDE23FD-219B-47E5-91DE-31F315CEBF8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSOReady.Test", "SSOReady.Test\SSOReady.Test.csproj", "{2D49E412-40A6-41D0-88B1-C639523D9CDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEDE23FD-219B-47E5-91DE-31F315CEBF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEDE23FD-219B-47E5-91DE-31F315CEBF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEDE23FD-219B-47E5-91DE-31F315CEBF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEDE23FD-219B-47E5-91DE-31F315CEBF8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D49E412-40A6-41D0-88B1-C639523D9CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D49E412-40A6-41D0-88B1-C639523D9CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D49E412-40A6-41D0-88B1-C639523D9CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D49E412-40A6-41D0-88B1-C639523D9CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

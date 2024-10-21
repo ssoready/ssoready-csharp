@@ -66,4 +66,4 @@ jobs:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: |
           dotnet pack src -c Release
-          dotnet nuget push src/SSOReady.Client/bin/Release/*.nupkg --api-key $NUGET_API_KEY --source "nuget.org"
+          dotnet nuget push src/SSOReady/bin/Release/*.nupkg --api-key $NUGET_API_KEY --source "nuget.org"

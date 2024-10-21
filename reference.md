@@ -1,6 +1,6 @@
 # Reference
 ## Saml
-<details><summary><code>client.Saml.<a href="/src/SSOReady.Client/Saml/SamlClient.cs">RedeemSamlAccessCodeAsync</a>(RedeemSamlAccessCodeRequest { ... }) -> RedeemSamlAccessCodeResponse</code></summary>
+<details><summary><code>client.Saml.<a href="/src/SSOReady/Saml/SamlClient.cs">RedeemSamlAccessCodeAsync</a>(RedeemSamlAccessCodeRequest { ... }) -> RedeemSamlAccessCodeResponse</code></summary>
 <dl>
 <dd>
 
@@ -56,7 +56,7 @@ await client.Saml.RedeemSamlAccessCodeAsync(
 </dl>
 </details>
 
-<details><summary><code>client.Saml.<a href="/src/SSOReady.Client/Saml/SamlClient.cs">GetSamlRedirectUrlAsync</a>(GetSamlRedirectUrlRequest { ... }) -> GetSamlRedirectUrlResponse</code></summary>
+<details><summary><code>client.Saml.<a href="/src/SSOReady/Saml/SamlClient.cs">GetSamlRedirectUrlAsync</a>(GetSamlRedirectUrlRequest { ... }) -> GetSamlRedirectUrlResponse</code></summary>
 <dl>
 <dd>
 
@@ -113,7 +113,7 @@ await client.Saml.GetSamlRedirectUrlAsync(
 </details>
 
 ## Scim
-<details><summary><code>client.Scim.<a href="/src/SSOReady.Client/Scim/ScimClient.cs">ListScimGroupsAsync</a>(ScimListScimGroupsRequest { ... }) -> ListScimGroupsResponse</code></summary>
+<details><summary><code>client.Scim.<a href="/src/SSOReady/Scim/ScimClient.cs">ListScimGroupsAsync</a>(ScimListScimGroupsRequest { ... }) -> ListScimGroupsResponse</code></summary>
 <dl>
 <dd>
 
@@ -169,7 +169,7 @@ await client.Scim.ListScimGroupsAsync(
 </dl>
 </details>
 
-<details><summary><code>client.Scim.<a href="/src/SSOReady.Client/Scim/ScimClient.cs">GetScimGroupAsync</a>(id) -> GetScimGroupResponse</code></summary>
+<details><summary><code>client.Scim.<a href="/src/SSOReady/Scim/ScimClient.cs">GetScimGroupAsync</a>(id) -> GetScimGroupResponse</code></summary>
 <dl>
 <dd>
 
@@ -223,7 +223,7 @@ await client.Scim.GetScimGroupAsync("scim_group_...");
 </dl>
 </details>
 
-<details><summary><code>client.Scim.<a href="/src/SSOReady.Client/Scim/ScimClient.cs">ListScimUsersAsync</a>(ScimListScimUsersRequest { ... }) -> ListScimUsersResponse</code></summary>
+<details><summary><code>client.Scim.<a href="/src/SSOReady/Scim/ScimClient.cs">ListScimUsersAsync</a>(ScimListScimUsersRequest { ... }) -> ListScimUsersResponse</code></summary>
 <dl>
 <dd>
 
@@ -279,7 +279,7 @@ await client.Scim.ListScimUsersAsync(
 </dl>
 </details>
 
-<details><summary><code>client.Scim.<a href="/src/SSOReady.Client/Scim/ScimClient.cs">GetScimUserAsync</a>(id) -> GetScimUserResponse</code></summary>
+<details><summary><code>client.Scim.<a href="/src/SSOReady/Scim/ScimClient.cs">GetScimUserAsync</a>(id) -> GetScimUserResponse</code></summary>
 <dl>
 <dd>
 
@@ -334,7 +334,7 @@ await client.Scim.GetScimUserAsync("scim_user_...");
 </details>
 
 ## Management Organizations
-<details><summary><code>client.Management.Organizations.<a href="/src/SSOReady.Client/Management/Organizations/OrganizationsClient.cs">ListOrganizationsAsync</a>(OrganizationsListOrganizationsRequest { ... }) -> ListOrganizationsResponse</code></summary>
+<details><summary><code>client.Management.Organizations.<a href="/src/SSOReady/Management/Organizations/OrganizationsClient.cs">ListOrganizationsAsync</a>(OrganizationsListOrganizationsRequest { ... }) -> ListOrganizationsResponse</code></summary>
 <dl>
 <dd>
 
@@ -390,7 +390,7 @@ await client.Management.Organizations.ListOrganizationsAsync(
 </dl>
 </details>
 
-<details><summary><code>client.Management.Organizations.<a href="/src/SSOReady.Client/Management/Organizations/OrganizationsClient.cs">CreateOrganizationAsync</a>(Organization { ... }) -> CreateOrganizationResponse</code></summary>
+<details><summary><code>client.Management.Organizations.<a href="/src/SSOReady/Management/Organizations/OrganizationsClient.cs">CreateOrganizationAsync</a>(Organization { ... }) -> CreateOrganizationResponse</code></summary>
 <dl>
 <dd>
 
@@ -444,7 +444,7 @@ await client.Management.Organizations.CreateOrganizationAsync(new Organization()
 </dl>
 </details>
 
-<details><summary><code>client.Management.Organizations.<a href="/src/SSOReady.Client/Management/Organizations/OrganizationsClient.cs">GetOrganizationAsync</a>(id) -> GetOrganizationResponse</code></summary>
+<details><summary><code>client.Management.Organizations.<a href="/src/SSOReady/Management/Organizations/OrganizationsClient.cs">GetOrganizationAsync</a>(id) -> GetOrganizationResponse</code></summary>
 <dl>
 <dd>
 
@@ -498,7 +498,7 @@ await client.Management.Organizations.GetOrganizationAsync("id");
 </dl>
 </details>
 
-<details><summary><code>client.Management.Organizations.<a href="/src/SSOReady.Client/Management/Organizations/OrganizationsClient.cs">UpdateOrganizationAsync</a>(id, Organization { ... }) -> UpdateOrganizationResponse</code></summary>
+<details><summary><code>client.Management.Organizations.<a href="/src/SSOReady/Management/Organizations/OrganizationsClient.cs">UpdateOrganizationAsync</a>(id, Organization { ... }) -> UpdateOrganizationResponse</code></summary>
 <dl>
 <dd>
 
@@ -561,7 +561,7 @@ await client.Management.Organizations.UpdateOrganizationAsync("id", new Organiza
 </details>
 
 ## Management SamlConnections
-<details><summary><code>client.Management.SamlConnections.<a href="/src/SSOReady.Client/Management/SamlConnections/SamlConnectionsClient.cs">ListSamlConnectionsAsync</a>(SamlConnectionsListSamlConnectionsRequest { ... }) -> ListSamlConnectionsResponse</code></summary>
+<details><summary><code>client.Management.SamlConnections.<a href="/src/SSOReady/Management/SamlConnections/SamlConnectionsClient.cs">ListSamlConnectionsAsync</a>(SamlConnectionsListSamlConnectionsRequest { ... }) -> ListSamlConnectionsResponse</code></summary>
 <dl>
 <dd>
 
@@ -617,7 +617,7 @@ await client.Management.SamlConnections.ListSamlConnectionsAsync(
 </dl>
 </details>
 
-<details><summary><code>client.Management.SamlConnections.<a href="/src/SSOReady.Client/Management/SamlConnections/SamlConnectionsClient.cs">CreateSamlConnectionAsync</a>(SamlConnection { ... }) -> CreateSamlConnectionResponse</code></summary>
+<details><summary><code>client.Management.SamlConnections.<a href="/src/SSOReady/Management/SamlConnections/SamlConnectionsClient.cs">CreateSamlConnectionAsync</a>(SamlConnection { ... }) -> CreateSamlConnectionResponse</code></summary>
 <dl>
 <dd>
 
@@ -671,7 +671,7 @@ await client.Management.SamlConnections.CreateSamlConnectionAsync(new SamlConnec
 </dl>
 </details>
 
-<details><summary><code>client.Management.SamlConnections.<a href="/src/SSOReady.Client/Management/SamlConnections/SamlConnectionsClient.cs">GetSamlConnectionAsync</a>(id) -> GetSamlConnectionResponse</code></summary>
+<details><summary><code>client.Management.SamlConnections.<a href="/src/SSOReady/Management/SamlConnections/SamlConnectionsClient.cs">GetSamlConnectionAsync</a>(id) -> GetSamlConnectionResponse</code></summary>
 <dl>
 <dd>
 
@@ -725,7 +725,7 @@ await client.Management.SamlConnections.GetSamlConnectionAsync("id");
 </dl>
 </details>
 
-<details><summary><code>client.Management.SamlConnections.<a href="/src/SSOReady.Client/Management/SamlConnections/SamlConnectionsClient.cs">UpdateSamlConnectionAsync</a>(id, SamlConnection { ... }) -> UpdateSamlConnectionResponse</code></summary>
+<details><summary><code>client.Management.SamlConnections.<a href="/src/SSOReady/Management/SamlConnections/SamlConnectionsClient.cs">UpdateSamlConnectionAsync</a>(id, SamlConnection { ... }) -> UpdateSamlConnectionResponse</code></summary>
 <dl>
 <dd>
 
@@ -788,7 +788,7 @@ await client.Management.SamlConnections.UpdateSamlConnectionAsync("id", new Saml
 </details>
 
 ## Management ScimDirectories
-<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady.Client/Management/ScimDirectories/ScimDirectoriesClient.cs">ListScimDirectoriesAsync</a>(ScimDirectoriesListScimDirectoriesRequest { ... }) -> ListScimDirectoriesResponse</code></summary>
+<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady/Management/ScimDirectories/ScimDirectoriesClient.cs">ListScimDirectoriesAsync</a>(ScimDirectoriesListScimDirectoriesRequest { ... }) -> ListScimDirectoriesResponse</code></summary>
 <dl>
 <dd>
 
@@ -844,7 +844,7 @@ await client.Management.ScimDirectories.ListScimDirectoriesAsync(
 </dl>
 </details>
 
-<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady.Client/Management/ScimDirectories/ScimDirectoriesClient.cs">CreateScimDirectoryAsync</a>(ScimDirectory { ... }) -> CreateScimDirectoryResponse</code></summary>
+<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady/Management/ScimDirectories/ScimDirectoriesClient.cs">CreateScimDirectoryAsync</a>(ScimDirectory { ... }) -> CreateScimDirectoryResponse</code></summary>
 <dl>
 <dd>
 
@@ -898,7 +898,7 @@ await client.Management.ScimDirectories.CreateScimDirectoryAsync(new ScimDirecto
 </dl>
 </details>
 
-<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady.Client/Management/ScimDirectories/ScimDirectoriesClient.cs">GetScimDirectoryAsync</a>(id) -> GetScimDirectoryResponse</code></summary>
+<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady/Management/ScimDirectories/ScimDirectoriesClient.cs">GetScimDirectoryAsync</a>(id) -> GetScimDirectoryResponse</code></summary>
 <dl>
 <dd>
 
@@ -952,7 +952,7 @@ await client.Management.ScimDirectories.GetScimDirectoryAsync("id");
 </dl>
 </details>
 
-<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady.Client/Management/ScimDirectories/ScimDirectoriesClient.cs">UpdateScimDirectoryAsync</a>(id, ScimDirectory { ... }) -> UpdateScimDirectoryResponse</code></summary>
+<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady/Management/ScimDirectories/ScimDirectoriesClient.cs">UpdateScimDirectoryAsync</a>(id, ScimDirectory { ... }) -> UpdateScimDirectoryResponse</code></summary>
 <dl>
 <dd>
 
@@ -1014,7 +1014,7 @@ await client.Management.ScimDirectories.UpdateScimDirectoryAsync("id", new ScimD
 </dl>
 </details>
 
-<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady.Client/Management/ScimDirectories/ScimDirectoriesClient.cs">RotateScimDirectoryBearerTokenAsync</a>(id) -> RotateScimDirectoryBearerTokenResponse</code></summary>
+<details><summary><code>client.Management.ScimDirectories.<a href="/src/SSOReady/Management/ScimDirectories/ScimDirectoriesClient.cs">RotateScimDirectoryBearerTokenAsync</a>(id) -> RotateScimDirectoryBearerTokenResponse</code></summary>
 <dl>
 <dd>
 
@@ -1079,7 +1079,7 @@ await client.Management.ScimDirectories.RotateScimDirectoryBearerTokenAsync("id"
 </details>
 
 ## Management SetupUrls
-<details><summary><code>client.Management.SetupUrls.<a href="/src/SSOReady.Client/Management/SetupUrls/SetupUrlsClient.cs">CreateSetupUrlAsync</a>(CreateSetupUrlRequest { ... }) -> CreateSetupUrlResponse</code></summary>
+<details><summary><code>client.Management.SetupUrls.<a href="/src/SSOReady/Management/SetupUrls/SetupUrlsClient.cs">CreateSetupUrlAsync</a>(CreateSetupUrlRequest { ... }) -> CreateSetupUrlResponse</code></summary>
 <dl>
 <dd>
 

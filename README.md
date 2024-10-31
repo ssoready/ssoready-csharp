@@ -1,9 +1,11 @@
-# SSOReady C# Library
+# SSOReady-CSharp
 
-[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=https%3A%2F%2Fgithub.com%2Fssoready%2Fssoready-csharp)
 [![nuget shield](https://img.shields.io/nuget/v/SSOReady.Client)](https://nuget.org/packages/SSOReady.Client)
 
-The Ssoready C# library provides convenient access to the Ssoready API from C#.
+`SSOReady.Client` is a C# SDK for the [SSOReady](https://ssoready.com) API.
+
+SSOReady is a set of open-source dev tools for implementing Enterprise SSO. You
+can use SSOReady to add SAML and SCIM support to your product this afternoon.
 
 ## Installation
 
@@ -13,77 +15,84 @@ nuget install SSOReady.Client
 
 ## Usage
 
-Instantiate and use the client with the following:
+This section provides a high-level overview of how SSOReady works, and how it's possible to implement SAML and SCIM in
+just an afternoon. For a more thorough introduction, visit the [SAML
+quickstart](https://ssoready.com/docs/saml/saml-quickstart) or the [SCIM
+quickstart](https://ssoready.com/docs/scim/scim-quickstart).
+
+The first thing you'll do is create a SSOReady client instance:
 
 ```csharp
 using SSOReady.Client;
 
-var client = new SSOReady();
-await client.Saml.RedeemSamlAccessCodeAsync(
-    new RedeemSamlAccessCodeRequest { SamlAccessCode = "saml_access_code_..." }
-);
+// this loads your SSOReady API key from SSOREADY_API_KEY
+var ssoready = new SSOReady.Client.SSOReady();
 ```
 
-## Exception Handling
+### SAML in two lines of code
 
-When the API returns a non-success status code (4xx or 5xx response), a subclass of the following error
-will be thrown.
+SAML (aka "Enterprise SSO") consists of two steps: an _initiation_ step where
+you redirect your users to their corporate identity provider, and a _handling_
+step where you log them in once you know who they are.
+
+To initiate logins, you'll use SSOReady's [Get SAML Redirect
+URL](https://ssoready.com/docs/api-reference/saml/get-saml-redirect-url)
+endpoint:
 
 ```csharp
-using SSOReady.Client;
+// this is how you implement a "Sign in with SSO" button
+var redirectResponse = await ssoready.Saml.GetSamlRedirectUrlAsync(new GetSamlRedirectUrlRequest
+{
+    // the ID of the organization/workspace/team (whatever you call it)
+    // you want to log the user into
+    OrganizationExternalId = email.Split("@")[1]
+});
 
-try {
-    var response = await client.Saml.RedeemSamlAccessCodeAsync(...);
-} catch (SSOReadyApiException e) {
-    System.Console.WriteLine(e.Body);
-    System.Console.WriteLine(e.StatusCode);
+// redirect the user to `redirectResponse.RedirectUrl`...
+```
+
+You can use whatever your preferred ID is for organizations (you might call them
+"workspaces" or "teams") as your `OrganizationExternalId`. You configure those
+IDs inside SSOReady, and SSOReady handles keeping track of that organization's
+SAML and SCIM settings.
+
+To handle logins, you'll use SSOReady's [Redeem SAML Access
+Code](https://ssoready.com/docs/api-reference/saml/redeem-saml-access-code) endpoint:
+
+```csharp
+// this goes in your handler for POST /ssoready-callback
+var redeemResponse = await ssoready.Saml.RedeemSamlAccessCodeAsync(new RedeemSamlAccessCodeRequest
+{
+    SamlAccessCode = "saml_access_code_..."
+});
+
+// log the user in as `redeemResponse.Email` inside `redeemResponse.OrganizationExternalId`...
+```
+
+You configure the URL for your `/ssoready-callback` endpoint in SSOReady.
+
+### SCIM in one line of code
+
+SCIM (aka "Enterprise directory sync") is basically a way for you to get a list
+of your customer's employees offline.
+
+To get a customer's employees, you'll use SSOReady's [List SCIM
+Users](https://ssoready.com/docs/api-reference/scim/list-scim-users) endpoint:
+
+```csharp
+var listScimUsersResponse = await ssoready.Scim.ListScimUsersAsync(
+    new ScimListScimUsersRequest { OrganizationExternalId = "my_custom_external_id" }
+});
+
+// create users from each scimUser
+foreach (var scimUser in listScimUsersResponse.ScimUsers) {
+    // every scimUser has an Id, Email, Attributes, and Deleted
+    // ...
 }
-```
-
-## Advanced
-
-### Retries
-
-The SDK is instrumented with automatic retries with exponential backoff. A request will be retried as long
-as the request is deemed retriable and the number of retry attempts has not grown larger than the configured
-retry limit (default: 2).
-
-A request is deemed retriable when any of the following HTTP status codes is returned:
-
-- [408](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/408) (Timeout)
-- [429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) (Too Many Requests)
-- [5XX](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) (Internal Server Errors)
-
-Use the `MaxRetries` request option to configure this behavior.
-
-```csharp
-var response = await client.Saml.RedeemSamlAccessCodeAsync(
-    ...,
-    new RequestOptions {
-        MaxRetries: 0 // Override MaxRetries at the request level
-    }
-);
-```
-
-### Timeouts
-
-The SDK defaults to a 30 second timeout. Use the `Timeout` option to configure this behavior.
-
-```csharp
-var response = await client.Saml.RedeemSamlAccessCodeAsync(
-    ...,
-    new RequestOptions {
-        Timeout: TimeSpan.FromSeconds(3) // Override timeout to 3s
-    }
-);
 ```
 
 ## Contributing
 
-While we value open-source contributions to this SDK, this library is generated programmatically.
-Additions made directly to this library would have to be moved over to our generation code,
-otherwise they would be overwritten upon the next generated release. Feel free to open a PR as
-a proof of concept, but know that we will not be able to merge it as-is. We suggest opening
-an issue first to discuss with us!
-
-On the other hand, contributions to the README are always very welcome!
+Issues and PRs are more than welcome. Be advised that this library is largely
+autogenerated from [`ssoready/docs`](https://github.com/ssoready/docs). Most
+code changes ultimately need to be made there, not on this repo.

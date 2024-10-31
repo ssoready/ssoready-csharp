@@ -7,6 +7,10 @@
 SSOReady is a set of open-source dev tools for implementing Enterprise SSO. You
 can use SSOReady to add SAML and SCIM support to your product this afternoon.
 
+For example applications built using SSOReady C#, check out:
+
+- [SSOReady Example App: C# ASP.NET Core with SAML](https://github.com/ssoready/ssoready-example-app-csharp-aspnetcore-saml)
+
 ## Installation
 
 ```sh

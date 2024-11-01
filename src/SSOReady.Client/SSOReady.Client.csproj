@@ -7,8 +7,9 @@
         <NuGetAudit>false</NuGetAudit>
         <LangVersion>12</LangVersion>
         <Nullable>enable</Nullable>
-        <Version>0.1.2</Version>
+        <Version>1.0.0</Version>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>MIT</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/ssoready/ssoready-csharp</PackageProjectUrl>
     </PropertyGroup>
 
@@ -40,6 +41,10 @@
     <ItemGroup>
         <None Include="..\..\README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
+
+<ItemGroup>
+    <None Include="..\..\MIT" Pack="true" PackagePath=""/>
+</ItemGroup>
 
     <ItemGroup>
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">

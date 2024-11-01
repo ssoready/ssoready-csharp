@@ -1,4 +1,6 @@
-# SSOReady-CSharp
+![](https://i.imgur.com/OhtkhbJ.png)
+
+# SSOReady-CSharp: SAML & SCIM for C#
 
 [![nuget shield](https://img.shields.io/nuget/v/SSOReady.Client)](https://nuget.org/packages/SSOReady.Client)
 

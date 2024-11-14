@@ -90,6 +90,7 @@ public partial class OrganizationsClient
                 Method = HttpMethod.Post,
                 Path = "v1/organizations",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken
@@ -180,6 +181,7 @@ public partial class OrganizationsClient
                 Method = HttpMethodExtensions.Patch,
                 Path = $"v1/organizations/{id}",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken

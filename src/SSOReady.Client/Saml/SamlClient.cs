@@ -39,6 +39,7 @@ public partial class SamlClient
                 Method = HttpMethod.Post,
                 Path = "v1/saml/redeem",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken
@@ -86,6 +87,7 @@ public partial class SamlClient
                 Method = HttpMethod.Post,
                 Path = "v1/saml/redirect",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken

@@ -20,7 +20,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SSOReady.Client\SSOReady.Client.csproj" />
+        <ProjectReference Include="..\SSOReady.Client\SSOReady.Client.csproj" />
     </ItemGroup>
 
+    <Import Project="SSOReady.Client.Test.Custom.props" Condition="Exists('SSOReady.Client.Test.Custom.props')" />
 </Project>

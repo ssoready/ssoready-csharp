@@ -7,9 +7,11 @@
         <NuGetAudit>false</NuGetAudit>
         <LangVersion>12</LangVersion>
         <Nullable>enable</Nullable>
-        <Version>1.0.0</Version>
+        <Version>1.1.0</Version>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+        <FileVersion>$(Version)</FileVersion>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageLicenseFile>MIT</PackageLicenseFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/ssoready/ssoready-csharp</PackageProjectUrl>
     </PropertyGroup>
 
@@ -35,16 +37,12 @@
     <ItemGroup>
         <PackageReference Include="OneOf" Version="3.0.263" />
         <PackageReference Include="OneOf.Extended" Version="3.0.263" />
-        <PackageReference Include="System.Text.Json" Version="8.0.4" />
+        <PackageReference Include="System.Text.Json" Version="8.0.5" />
     </ItemGroup>
 
     <ItemGroup>
         <None Include="..\..\README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
-
-<ItemGroup>
-    <None Include="..\..\MIT" Pack="true" PackagePath=""/>
-</ItemGroup>
 
     <ItemGroup>
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
@@ -52,4 +50,5 @@
         </AssemblyAttribute>
     </ItemGroup>
 
+    <Import Project="SSOReady.Client.Custom.props" Condition="Exists('SSOReady.Client.Custom.props')" />
 </Project>

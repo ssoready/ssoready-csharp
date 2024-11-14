@@ -40,6 +40,7 @@ public partial class SetupUrlsClient
                 Method = HttpMethod.Post,
                 Path = "v1/setup-urls",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken

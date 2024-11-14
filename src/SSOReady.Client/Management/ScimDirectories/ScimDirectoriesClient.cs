@@ -94,6 +94,7 @@ public partial class ScimDirectoriesClient
                 Method = HttpMethod.Post,
                 Path = "v1/scim-directories",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken
@@ -184,6 +185,7 @@ public partial class ScimDirectoriesClient
                 Method = HttpMethodExtensions.Patch,
                 Path = $"v1/scim-directories/{id}",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken

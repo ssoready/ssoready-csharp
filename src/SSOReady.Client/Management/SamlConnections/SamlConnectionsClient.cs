@@ -94,6 +94,7 @@ public partial class SamlConnectionsClient
                 Method = HttpMethod.Post,
                 Path = "v1/saml-connections",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken
@@ -184,6 +185,7 @@ public partial class SamlConnectionsClient
                 Method = HttpMethodExtensions.Patch,
                 Path = $"v1/saml-connections/{id}",
                 Body = request,
+                ContentType = "application/json",
                 Options = options,
             },
             cancellationToken
